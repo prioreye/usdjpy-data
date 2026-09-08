@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "checked_at": null,
+  "series": {
+    "fx": {
+      "value": 156.295,
+      "observed_at": "2026-09-04",
+      "unit": "JPY/USD",
+      "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx260904.pdf",
+      "label": "日銀 17:00 JST 売買気配の中値",
+      "status": "seed",
+      "checked_at": null,
+      "last_success_at": null
+    },
+    "fed": {
+      "value": 3.5,
+      "upper": 3.75,
+      "observed_at": "2026-07-29",
+      "unit": "%",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "label": "米FF金利 誘導目標",
+      "status": "seed",
+      "checked_at": null,
+      "last_success_at": null
+    },
+    "boj": {
+      "value": 1.0,
+      "observed_at": "2026-07-31",
+      "unit": "%",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf",
+      "label": "日銀 政策金利・決定日",
+      "status": "seed",
+      "checked_at": null,
+      "last_success_at": null
+    }
+  },
+  "failed": []
+}
