@@ -45,15 +45,15 @@ def fx():
     return {'value':round((lo+hi)/2,5),'observed_at':datetime.strptime(d,'%y%m%d').date().isoformat(),'unit':'JPY/USD','source_url':url,'label':'日銀 17:00 JST 売買気配の中値'}
 
 def fed():
-    vals=[]
-    for sid in ['DFEDTARL','DFEDTARU']:
-        rows=list(csv.reader(io.StringIO(html('https://fred.stlouisfed.org/graph/graph.csv?id='+sid+'&cosd='+str(TODAY-timedelta(days=30))))))
-        good=[(r[0],float(r[1])) for r in rows[1:] if len(r)>1 and re.fullmatch(r'\d{4}-\d{2}-\d{2}',r[0]) and re.fullmatch(r'-?\d+(?:\.\d+)?',r[1]) and r[0]<=str(TODAY)]
-        if not good: raise ValueError('FRED observations missing')
-        vals.append(max(good))
-    if vals[0][0]!=vals[1][0] or not 0<=vals[1][1]-vals[0][1]<=1: raise ValueError('inconsistent target range')
-    if (TODAY-datetime.fromisoformat(vals[0][0]).date()).days>10: raise ValueError('stale FRED observations')
-    return {'value':vals[0][1],'upper':vals[1][1],'observed_at':vals[0][0],'unit':'%','source_url':'https://fred.stlouisfed.org/series/DFEDTARU','label':'米FF金利 誘導目標（FRED / FRB）'}
+    from fractions import Fraction
+    d,url=latest_link('https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm',r'monetary(\d{8})a\.htm')
+    source=text(html(url)).replace('–','-').replace('−','-')
+    m=re.search(r'target range for the federal funds rate (?:at|to)\s+([\d./ -]+?)\s+to\s+([\d./ -]+?)\s+percent',source,re.I)
+    if not m: raise ValueError('FOMC target range missing')
+    def number(s): return sum(float(Fraction(x)) for x in s.strip().replace('-',' ').split())
+    lo,hi=number(m[1]),number(m[2])
+    if not 0<=hi-lo<=1: raise ValueError('invalid FOMC target range')
+    return {'value':lo,'upper':hi,'observed_at':datetime.strptime(d,'%Y%m%d').date().isoformat(),'unit':'%','source_url':url,'label':'FRB FOMC政策金利・決定日'}
 
 def boj():
     found=[]
@@ -75,7 +75,7 @@ def yen_number(s):
     return (-1 if negative else 1)*(int(m[1] or 0)+int(m[2] or 0)/10000)
 
 def bop():
-    d,url=latest_link('https://www.mof.go.jp/policy/international_policy/reference/balance_of_payments/index.htm',r'pg(\d{6})\.htm')
+    d,url=latest_link('https://www.mof.go.jp/policy/international_policy/reference/balance_of_payments/release_date.htm',r'pg(\d{6})\.htm')
     source=html(url); result={}
     for row in re.findall(r'<tr\b[^>]*>(.*?)</tr>',source,re.S|re.I):
         cells=[text(c).strip() for c in re.findall(r'<t[dh]\b[^>]*>(.*?)</t[dh]>',row,re.S|re.I)]
