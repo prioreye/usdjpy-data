@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-08T15:32:19+00:00",
+  "checked_at": "2026-09-08T15:36:25+00:00",
   "series": {
     "fx": {
       "value": 153.81,
@@ -8,8 +8,8 @@
       "unit": "JPY/USD",
       "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx260908.pdf",
       "label": "日銀 17:00 JST 売買気配の中値",
-      "checked_at": "2026-09-08T15:32:19+00:00",
-      "last_success_at": "2026-09-08T15:32:19+00:00",
+      "checked_at": "2026-09-08T15:36:25+00:00",
+      "last_success_at": "2026-09-08T15:36:25+00:00",
       "status": "ok"
     },
     "fed": {
@@ -18,11 +18,10 @@
       "observed_at": "2026-07-29",
       "unit": "%",
       "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-      "label": "米FF金利 誘導目標",
-      "status": "error",
-      "checked_at": "2026-09-08T15:32:19+00:00",
-      "last_success_at": null,
-      "error": "HTTPError: HTTP Error 404: Not Found"
+      "label": "FRB FOMC政策金利・決定日",
+      "checked_at": "2026-09-08T15:36:25+00:00",
+      "last_success_at": "2026-09-08T15:36:25+00:00",
+      "status": "ok"
     },
     "boj": {
       "value": 1.0,
@@ -30,19 +29,24 @@
       "unit": "%",
       "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf",
       "label": "日銀 政策金利・決定日",
-      "checked_at": "2026-09-08T15:32:19+00:00",
-      "last_success_at": "2026-09-08T15:32:19+00:00",
+      "checked_at": "2026-09-08T15:36:25+00:00",
+      "last_success_at": "2026-09-08T15:36:25+00:00",
+      "status": "ok"
+    },
+    "bop": {
+      "value": -0.3999,
+      "services": -0.5129,
+      "income": 4.2896,
+      "observed_at": "2026-07-01",
+      "period": "2026-07",
+      "unit": "trillion JPY/month",
+      "source_url": "https://www.mof.go.jp/policy/international_policy/reference/balance_of_payments/preliminary/pg202607.htm",
+      "label": "財務省 国際収支・月次速報（非季調）",
+      "checked_at": "2026-09-08T15:36:25+00:00",
+      "last_success_at": "2026-09-08T15:36:25+00:00",
       "status": "ok"
     }
   },
-  "failed": [
-    "fed",
-    "bop"
-  ],
-  "unavailable": {
-    "bop": {
-      "checked_at": "2026-09-08T15:32:19+00:00",
-      "status": "error"
-    }
-  }
+  "failed": [],
+  "unavailable": {}
 }
