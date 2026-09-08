@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": null,
+  "checked_at": "2026-09-08T15:32:19+00:00",
   "series": {
     "fx": {
-      "value": 156.295,
-      "observed_at": "2026-09-04",
+      "value": 153.81,
+      "observed_at": "2026-09-08",
       "unit": "JPY/USD",
-      "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx260904.pdf",
+      "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx260908.pdf",
       "label": "日銀 17:00 JST 売買気配の中値",
-      "status": "seed",
-      "checked_at": null,
-      "last_success_at": null
+      "checked_at": "2026-09-08T15:32:19+00:00",
+      "last_success_at": "2026-09-08T15:32:19+00:00",
+      "status": "ok"
     },
     "fed": {
       "value": 3.5,
@@ -19,9 +19,10 @@
       "unit": "%",
       "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "label": "米FF金利 誘導目標",
-      "status": "seed",
-      "checked_at": null,
-      "last_success_at": null
+      "status": "error",
+      "checked_at": "2026-09-08T15:32:19+00:00",
+      "last_success_at": null,
+      "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "boj": {
       "value": 1.0,
@@ -29,10 +30,19 @@
       "unit": "%",
       "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf",
       "label": "日銀 政策金利・決定日",
-      "status": "seed",
-      "checked_at": null,
-      "last_success_at": null
+      "checked_at": "2026-09-08T15:32:19+00:00",
+      "last_success_at": "2026-09-08T15:32:19+00:00",
+      "status": "ok"
     }
   },
-  "failed": []
+  "failed": [
+    "fed",
+    "bop"
+  ],
+  "unavailable": {
+    "bop": {
+      "checked_at": "2026-09-08T15:32:19+00:00",
+      "status": "error"
+    }
+  }
 }
