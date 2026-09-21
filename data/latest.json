@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-20T14:17:00+00:00",
+  "checked_at": "2026-09-21T16:30:57+00:00",
   "series": {
     "fx": {
       "value": 157.49,
@@ -8,8 +8,8 @@
       "unit": "JPY/USD",
       "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx260918.pdf",
       "label": "日銀 17:00 JST 売買気配の中値",
-      "checked_at": "2026-09-20T14:17:00+00:00",
-      "last_success_at": "2026-09-20T14:17:00+00:00",
+      "checked_at": "2026-09-21T16:30:57+00:00",
+      "last_success_at": "2026-09-21T16:30:57+00:00",
       "status": "ok"
     },
     "fed": {
@@ -19,7 +19,7 @@
       "unit": "%",
       "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "label": "FRB FOMC政策金利・決定日",
-      "checked_at": "2026-09-20T14:17:00+00:00",
+      "checked_at": "2026-09-21T16:30:57+00:00",
       "last_success_at": "2026-09-16T15:03:06+00:00",
       "status": "error",
       "error": "ValueError: FOMC target range missing"
@@ -30,8 +30,8 @@
       "unit": "%",
       "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
       "label": "日銀 政策金利・決定日",
-      "checked_at": "2026-09-20T14:17:00+00:00",
-      "last_success_at": "2026-09-20T14:17:00+00:00",
+      "checked_at": "2026-09-21T16:30:57+00:00",
+      "last_success_at": "2026-09-21T16:30:57+00:00",
       "status": "ok"
     },
     "bop": {
@@ -43,8 +43,8 @@
       "unit": "trillion JPY/month",
       "source_url": "https://www.mof.go.jp/policy/international_policy/reference/balance_of_payments/preliminary/pg202607.htm",
       "label": "財務省 国際収支・月次速報（非季調）",
-      "checked_at": "2026-09-20T14:17:00+00:00",
-      "last_success_at": "2026-09-20T14:17:00+00:00",
+      "checked_at": "2026-09-21T16:30:57+00:00",
+      "last_success_at": "2026-09-21T16:30:57+00:00",
       "status": "ok"
     }
   },
