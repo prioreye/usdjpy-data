@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-07T17:28:18+00:00",
+  "checked_at": "2026-10-08T17:27:12+00:00",
   "series": {
     "fx": {
-      "value": 158.105,
-      "observed_at": "2026-10-07",
+      "value": 158.185,
+      "observed_at": "2026-10-08",
       "unit": "JPY/USD",
-      "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx261007.pdf",
+      "source_url": "https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx261008.pdf",
       "label": "日銀 17:00 JST 売買気配の中値",
-      "checked_at": "2026-10-07T17:28:18+00:00",
-      "last_success_at": "2026-10-07T17:28:18+00:00",
+      "checked_at": "2026-10-08T17:27:12+00:00",
+      "last_success_at": "2026-10-08T17:27:12+00:00",
       "status": "ok"
     },
     "fed": {
@@ -19,7 +19,7 @@
       "unit": "%",
       "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "label": "FRB FOMC政策金利・決定日",
-      "checked_at": "2026-10-07T17:28:18+00:00",
+      "checked_at": "2026-10-08T17:27:12+00:00",
       "last_success_at": "2026-09-16T15:03:06+00:00",
       "status": "error",
       "error": "ValueError: FOMC target range missing"
@@ -30,21 +30,21 @@
       "unit": "%",
       "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
       "label": "日銀 政策金利・決定日",
-      "checked_at": "2026-10-07T17:28:18+00:00",
-      "last_success_at": "2026-10-07T17:28:18+00:00",
+      "checked_at": "2026-10-08T17:27:12+00:00",
+      "last_success_at": "2026-10-08T17:27:12+00:00",
       "status": "ok"
     },
     "bop": {
-      "value": -0.3999,
-      "services": -0.5129,
-      "income": 4.2896,
-      "observed_at": "2026-07-01",
-      "period": "2026-07",
+      "value": -0.6877,
+      "services": -0.1158,
+      "income": 5.1332,
+      "observed_at": "2026-08-01",
+      "period": "2026-08",
       "unit": "trillion JPY/month",
-      "source_url": "https://www.mof.go.jp/policy/international_policy/reference/balance_of_payments/preliminary/pg202607.htm",
+      "source_url": "https://www.mof.go.jp/policy/international_policy/reference/balance_of_payments/preliminary/pg202608.htm",
       "label": "財務省 国際収支・月次速報（非季調）",
-      "checked_at": "2026-10-07T17:28:18+00:00",
-      "last_success_at": "2026-10-07T17:28:18+00:00",
+      "checked_at": "2026-10-08T17:27:12+00:00",
+      "last_success_at": "2026-10-08T17:27:12+00:00",
       "status": "ok"
     }
   },
